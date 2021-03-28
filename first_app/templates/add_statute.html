@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/add_subsection" method = "post">
+        {% csrf_token %}
+    <label for="citation">Citation:</label>
+    <input type="text" name="citation">
+    <label for="section">Section:</label>
+    <input type="text" name='section'>
+    <label for="statute">Statute:</label>
+    <input type="text" name="statute">
+    <label for="state">State:</label>
+    <input type="text" name="state">
+    <label for="language">Language:</label>
+    <textarea name="language" id="" cols="30" rows="10"></textarea>
+    <input type="submit">
+    </form>
+</body>
+</html>

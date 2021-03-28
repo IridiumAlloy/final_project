@@ -1,0 +1,5 @@
+__pycache__/
+.vscode/
+venv/
+Db.sqlite3
+private_settings.py

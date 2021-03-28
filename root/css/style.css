@@ -1,0 +1,125 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#wrapper{
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+}
+#forms{
+    display: flex;
+    flex-direction: row;
+}
+#form_1{
+    height: 1000px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+#form_1 input{
+    margin: 5px;
+    display: block;
+}
+#form_1 #register{
+    background-color:#247BA0;
+    padding:5px;
+    border-radius: 4px;
+    color: white;
+}
+#form_2{
+    height: 1000px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+#form_2 input{
+    margin:5px;
+    display: block;
+}
+#form_2 #login{
+background-color: #35A7FF;
+padding: 5px;
+border-radius: 4px;
+color: white;
+}
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 2px black;
+    margin: 50px;
+}
+#main_content{
+    display: flex;
+    flex-direction: row;
+}
+#side-bar{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 400px;
+}
+
+.quote{
+    display: flex;
+    flex-direction: column;
+    border: 2px solId black;
+    margin: 15px;
+    width:300px;
+
+}
+#logout a{
+    text-decoration: none;
+    color: black;
+    margin: 5px
+}
+#links{
+    margin: 10px 10px 10px 700px;
+}
+.alert {
+    padding: 20px;
+    background-color: #f44336; 
+    color: white;
+    margin-bottom: 15px;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+.accordion .card {
+	border: none;
+	margin-bottom: 2px;
+}
+.accordion .card-header {
+	background: #21c2a2;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.accordion .card-header h2 {
+	color: #fff;
+	font-size: 1rem;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+}
+.accordion .card-header h2 span {
+	float: left;
+	margin-top: 10px;
+}
+.accordion .card-header button {
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+	float: right;
+}
+.accordion .card-header button:hover {
+	color: #23384e;
+}

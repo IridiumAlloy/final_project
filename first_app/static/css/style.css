@@ -1,0 +1,226 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#wrapper{
+    margin: auto;
+    width: 1000px;
+    height: 1000px;
+}
+#forms{
+    display: flex;
+    flex-direction: row;
+}
+#form_1{
+    height: 1000px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+#form_1 input{
+    margin: 5px;
+    display: block;
+}
+#form_1 #register{
+    background-color:#247BA0;
+    padding:5px;
+    border-radius: 4px;
+    color: white;
+}
+#form_2{
+    height: 1000px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+#form_2 input{
+    margin:5px;
+    display: block;
+}
+#form_2 #login{
+background-color: #35A7FF;
+padding: 5px;
+border-radius: 4px;
+color: white;
+}
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: solid 2px black;
+    margin: 50px;
+}
+#header span a{ 
+    margin: 5px;
+}
+#main_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#side-bar{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 400px;
+}
+#logout a{
+    text-decoration: none;
+    color: black;
+    margin: 15px;
+}
+#links{
+    margin: 10px 10px 10px 700px;
+}
+.alert {
+    padding: 20px;
+    background-color: #f44336; 
+    color: white;
+    margin-bottom: 15px;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.closebtn:hover {
+    color: black;
+}
+.accordion .card {
+	border: none;
+	margin-bottom: 2px;
+}
+.accordion .card-header {
+	background: #21c2a2;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.accordion .card-header h2 {
+	color: #fff;
+	font-size: 1rem;
+	font-family: "Roboto", sans-serif;
+	font-weight: 500;
+}
+.accordion .card-header h2 span {
+	float: left;
+	margin-top: 10px;
+}
+.accordion .card-header button {
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+	float: right;
+}
+.accordion .card-header button:hover {
+	color: #23384e;
+}
+.sidebar-nav {
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #545E75;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #312F2F;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+#test{
+    display: flex;
+    flex-direction: row;
+}
+.outersec {
+    width: 100%;
+    padding: 15px 0;
+    height: 100%;
+}
+
+.outersec>.left-col,
+.outersec>.right-col {
+    height: 100%;
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+.outersec>.left-col>.inner,
+.outersec>.right-col>.inner {
+    width: 100%;
+    overflow: auto;
+}
+.outersec>.right-col>.inner {
+    height: 100%;
+}
+
+.outersec>.right-col {
+    width: 250px;
+    border-left: 1px solid #444;
+    padding: 0 15px;
+    position: fixed;
+    right: 0;
+}
+
+.outersec>.right-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.outersec>.right-col ul>li>a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    width: 100%;
+    background-color: #efefef;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.outersec>.right-col ul>li.active a,
+.outersec>.right-col ul>li>a:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.outersec>.right-col ul>li:last-child>a {
+    margin-bottom: 0;
+}
+
+.outersec>.left-col {
+    width: calc(100% - 250px);
+    padding: 0 15px;
+}
+
+.outersec>.left-col .heading {
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #21c2a2;
+    color: #fff;
+}
+
+.outersec>.left-col .heading.active {
+    background-color: #BFD7B5;
+}

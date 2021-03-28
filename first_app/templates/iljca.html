@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Welcome {{user.id}}</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h3>Welcome {{user.first_name}} {{user.last_name}}</h3>
+            <span><a href="/user_page/{{user.id}}">Edit my Account</a>
+            <button id="logout"><a href="/logout">Logout</a></button></span>
+        </div>
+        <div id="test">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li> <a href="/welcome">Home Page</a> </li>
+                <li> <a href="/saved/{{user.id}}"> Saved Statutes</a> </li>
+                <li> <a href="#">Court Forms</a></li>
+                <li> <a href="/legal_aid">Legal Aid Agencies</a> </li>
+                <li> <a href="https://signin.lexisnexis.com/">For More Research</a> </li>
+            </ul>
+        </div> <!-- /#sidebar-wrapper -->
+        <div id="main_content">
+                <div class="container">
+                    <h1>{{statute.states.name}}</h1>
+                    <h2>{{statute.name}}</h2>
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <div class="accordion mt-5" id="accordionExample">
+                                {% for subsection in statute.subsections.all %}
+                                <div class="card">
+                                    <div class="card-header" id="heading{{subsection.id}}">
+                                        <h2 class="clearfix mb-0">
+                                            <span>  {{subsection.citation}}</span>
+                                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{subsection.id}}" aria-expanded="true" aria-controls="collapse{{subsection.id}}"><i class="fa fa-plus-circle"></i></button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapse{{subsection.id}}" class="collapse show" aria-labelledby="heading{{subsection.id}}" data-parent="#accordionExample">
+                                        <div class="card-body"> <p>{{subsection.section}} </p> <p>{{subsection.language}}</p><p><a href="/save/{{subsection.id}}">Save this subsection</a></p></div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>
